@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" co-ntent="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prompt()</title>
+</head>
+
+<body>
+
+
+    <script>
+        // const numero = prompt("Insira um número para que possamos calcular o seu dobro:");
+        // const resultado = numero * 2;
+        // alert(`O dobro obtido é: ${resultado}`);
+
+        // const numero = Number(prompt("Insira um número para que possamos calcular a sua soma:"));
+        // const resultado = numero + 2;
+        // alert(`A soma obtida é: ${resultado}`);
+
+        // const numero1 = Number(prompt("1º Número"));
+        // const numero2 = Number(prompt("2º Número"));
+        // const resultado = numero1 + numero2;
+        // alert(`A soma obtida é: ${resultado}`);
+
+        // const jantar = Number(prompt("Valor do Jantar:"));
+        // const taxa = jantar * 10/100;
+        // const resultado = taxa + jantar;
+        // alert(`Taxa de Garçom: R$ ${taxa.toFixed(2)} reais`);
+        // alert(`Total dos custos: R$ ${resultado.toFixed(2)} reais`);
+
+        // const dias = Number(prompt("Digite o número de dias:"));
+        // const horas = Number(prompt("Digite o número de horas:"));
+        // const conversao = dias * 24 + horas;
+        // alert(`Duração total da viagem: ${conversao} horas.`)
+
+        // 1.11 Exercícios
+
+        // A
+        const numero = Number(prompt("Digite um número:"));
+        const vizinhoAnterior = numero - 1;
+        const vizinhoPosterior = numero + 1;
+        alert(`Seus vizinhos são:\nAnterior = ${vizinhoAnterior}\nNúmero = ${numero}\nPosterior = ${vizinhoPosterior}`)
+
+        // B
+        const valorTotal = Number(prompt(`Digite o valor total da compra:`));
+        const clientes = Number(prompt(`Digite o total de clientes:`));
+        const conta = valorTotal / clientes;
+        alert(`Valor por cliente R$ ${conta.toFixed(2)}`)
+
+        // C
+        const preco = Number(prompt(`Digite o valor total da compra:`));
+        const desconto = preco - (preco * (10 / 100));
+        const parcelado = preco / 3;
+        alert(`Preço: R$ ${preco.toFixed(2)} reais\nÀ vista: R$ ${desconto.toFixed(2)} reais\nOu 3x de R$ ${parcelado.toFixed(2)} reais`);
+
+        // D
+        const nota1 = Number(prompt(`Digite o valor da NOTA 1:`));
+        const nota2 = Number(prompt(`Digite o valor da NOTA 2:`));
+        const media = (nota1 + nota2) / 2
+        alert(`Média final: ${media.toFixed(1)}`);
+
+    </script>
+
+
+</body>
+
+</html>

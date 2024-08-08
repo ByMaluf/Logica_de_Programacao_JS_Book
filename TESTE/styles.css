@@ -1,0 +1,19 @@
+.vermelho {
+  background-color: red;
+  padding: 10px;
+  display: inline-block;
+  border: solid;
+}
+
+.azul {
+  background-color: blue;
+  padding: 10px;
+  display: inline-block;
+  border: solid;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
