@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Exercício programa par ou ímpar -->
+    <h1>Programa par ou ímpar</h1>
+    <form action="">
+        <p>
+            <label for="number">Número</label>
+            <input id="number" type="number">
+        </p>
+
+        <button type="submit" class="botao">Verificar se é par ou ímpar</button>
+    </form>
+
+    <h3 class="resultado"></h3>
+
+    <script>
+        const formulario = document.querySelector('form');
+
+        function parOuImpar(e) {
+            e.preventDefault(); // previni o comportamento padrão
+
+            let resultado = document.querySelector('.resultado');
+            const numero = +formulario.querySelector('#number').value;
+            resultado.innerText = numero % 2 === 0 ? `${numero} é par.` : `${numero} é ímpar.`;
+        }
+
+        formulario.addEventListener('submit', parOuImpar);
+    </script>
+</body>
+
+</html>
