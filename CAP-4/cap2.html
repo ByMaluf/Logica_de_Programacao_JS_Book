@@ -14,10 +14,11 @@
     <form action="">
         <p>
             <label for="number">Número</label>
-            <input id="number" type="number">
+            <input step="0.01" id="number" type="number">
         </p>
 
         <button type="submit" class="botao">Verificar se é par ou ímpar</button>
+
     </form>
 
     <h3 class="resultado"></h3>
@@ -25,12 +26,19 @@
     <script>
         const formulario = document.querySelector('form');
 
+        "use strict"
         function parOuImpar(e) {
             e.preventDefault(); // previni o comportamento padrão
 
             let resultado = document.querySelector('.resultado');
-            const numero = +formulario.querySelector('#number').value;
-            resultado.innerText = numero % 2 === 0 ? `${numero} é par.` : `${numero} é ímpar.`;
+            const input = formulario.querySelector('#number');
+            let intputValue = +input.value;
+            if (Number.isInteger(intputValue)) {
+                resultado.innerText = intputValue % 2 === 0 ? `${intputValue} é par.` : `${intputValue} é ímpar.`;
+            } else {
+                resultado.innerText = `Apenas números inteiros são permitidos!`;
+                input.value = '';
+            }
         }
 
         formulario.addEventListener('submit', parOuImpar);
