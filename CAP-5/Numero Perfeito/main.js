@@ -22,5 +22,3 @@ form.addEventListener('submit', (e) => {
     resultado.innerHTML += `\nTotal = ${total}\n${numero} NÃO é um número perfeito.`
   }
 })
-
-// const numero = form.num.value;
